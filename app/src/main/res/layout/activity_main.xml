@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    android:background="#ccc">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/cropped_header_hourglass"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your working time (hr):"
+        android:id="@+id/enter_time"
+        android:layout_marginTop="20dp"
+        android:textSize="22sp"/>
+
+    <EditText
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/enter_time_txt"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:textSize="22sp"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Set time"
+        android:onClick="set_time"
+        android:id="@+id/set_time"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remaining:"
+        android:id="@+id/remaining_time"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:textSize="22sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/remaining_time_txt"
+        android:id="@+id/remaining_time_txt"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="60sp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/start"
+            android:onClick="start"
+            android:id="@+id/start"
+            android:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/reset"
+            android:onClick="reset"
+            android:id="@+id/reset"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar" />
+
+</LinearLayout>
